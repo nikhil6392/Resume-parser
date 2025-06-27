@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+psycopg2-binary  # PostgreSQL
+python-multipart  # for file upload
+pdfminer.six
+python-docx
+pulp
