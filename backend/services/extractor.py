@@ -1,3 +1,4 @@
+from rapidfuzz import fuzz
 import os
 import re
 import json
@@ -50,7 +51,7 @@ def load_synonyms() -> dict:
         return {}
 
 # 🔍 Extract matched skills from resume text
-def extract_skills(text: str) -> list:
+def extract_skills(text: str, threshold: int = 85) -> list:
     text = clean_text(text)
     skills = load_skills()
     synonyms = load_synonyms()
@@ -63,5 +64,10 @@ def extract_skills(text: str) -> list:
     for word in text.split():
         if word in synonyms:
             found.add(synonyms[word])
+        else:
+            for skill in skills:
+                if fuzz.ratio(word, skill) >= threshold:
+                    found.add(skill)
+                    break
 
     return sorted(found)
