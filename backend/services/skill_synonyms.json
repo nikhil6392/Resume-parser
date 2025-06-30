@@ -1,0 +1,7 @@
+{
+  "js": "javascript",
+  "py": "python",
+  "ml": "machine learning",
+  "restapi": "rest api",
+  "pgsql": "sql"
+}

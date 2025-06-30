@@ -1,0 +1,12 @@
+python
+java
+docker
+sql
+aws
+react
+excel
+nlp
+git
+machine learning
+rest api
+typescript
