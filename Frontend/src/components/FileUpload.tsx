@@ -93,6 +93,7 @@ export default function FileUpload() {
 
           <h2 className="mt-2 font-semibold">Job Required Skills:</h2>
           <p>{result.best_match?.skills?.join(", ") || "None listed"}</p>
+          <p>{result.best_match.name} ({result.best_match.score}% match)</p>
         </div>
       )}
     </div>

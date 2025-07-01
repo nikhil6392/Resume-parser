@@ -1,12 +1,19 @@
-python
-java
-docker
-sql
-aws
+solidity
+ethereum
+web3
+javascript
 react
-excel
-nlp
-git
-machine learning
-rest api
+hardhat
+chai
+mocha
+metamask
+ipfs
+tailwind css
+mongodb
+dao
+nft
+smart contracts
+ethers.js
+truffle
+ganache
 typescript
