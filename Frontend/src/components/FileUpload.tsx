@@ -11,13 +11,13 @@ export default function FileUpload() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
-    // ✅ Safety check: All 3 files must be present
+    //  Safety check: All 3 files must be present
     if (!resume || !job1 || !job2) {
       alert("Please upload resume and both job descriptions.");
       return;
     }
 
-    // ✅ Safety check: They must be valid File objects
+    //  Safety check: They must be valid File objects
     if (!(resume instanceof File) || !(job1 instanceof File) || !(job2 instanceof File)) {
       console.error("❌ One or more uploads are invalid File objects");
       alert("Upload error: Invalid file(s).");
@@ -34,10 +34,10 @@ export default function FileUpload() {
 
     try {
       const data = await matchResumeToJobs(resume, [job1, job2]);
-      console.log("✅ Received match result:", data);
+      console.log(" Received match result:", data);
       setResult(data);
     } catch (err: any) {
-      console.error("❌ API Error:", err?.response?.data || err?.message || err);
+      console.error(" API Error:", err?.response?.data || err?.message || err);
       alert("Something went wrong. Check browser console.");
     } finally {
       setLoading(false);
